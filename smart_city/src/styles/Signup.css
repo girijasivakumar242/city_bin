@@ -1,0 +1,773 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.signup-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 90px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 50px 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f8f7ff,
+            #fff1f8
+        );
+}
+
+
+/* =========================================
+   BACKGROUND GRID
+========================================= */
+
+.signup-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(99, 102, 241, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(99, 102, 241, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BACKGROUND SHAPES
+========================================= */
+
+.signup-bg-shape {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.signup-shape-one {
+    width: 500px;
+    height: 500px;
+
+    top: -280px;
+    left: -230px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(79, 70, 229, 0.18),
+            transparent 65%
+        );
+}
+
+
+.signup-shape-two {
+    width: 450px;
+    height: 450px;
+
+    right: -220px;
+    bottom: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(219, 39, 119, 0.16),
+            transparent 65%
+        );
+}
+
+
+/* =========================================
+   LEFT INFORMATION SECTION
+========================================= */
+
+.signup-info {
+    width: 470px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.info-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 30px;
+}
+
+
+.info-logo {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    color: white;
+
+    font-size: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    box-shadow:
+        0 10px 25px rgba(
+            124,
+            58,
+            237,
+            0.25
+        );
+}
+
+
+.info-brand h1 {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   MAIN INFORMATION HEADING
+========================================= */
+
+.signup-info > h2 {
+    font-size: 42px;
+
+    line-height: 1.15;
+
+    color: #30364d;
+
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+
+.info-description {
+    width: 440px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FEATURE CARDS
+========================================= */
+
+.feature-card {
+    width: 440px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 14px 17px;
+
+    margin-bottom: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.65);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 22px rgba(
+            79,
+            70,
+            229,
+            0.06
+        );
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.25s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateX(5px);
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    box-shadow:
+        0 12px 28px rgba(
+            79,
+            70,
+            229,
+            0.10
+        );
+}
+
+
+/* =========================================
+   FEATURE ICON
+========================================= */
+
+.feature-icon {
+    min-width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 21px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #fce7f3
+        );
+}
+
+
+/* =========================================
+   FEATURE TEXT
+========================================= */
+
+.feature-card h3 {
+    color: #374151;
+
+    font-size: 14px;
+
+    margin-bottom: 3px;
+}
+
+
+.feature-card p {
+    color: #8b93a3;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   FOOTER TEXT
+========================================= */
+
+.info-footer {
+    margin-top: 22px;
+
+    color: #8b93a3;
+
+    font-size: 12px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   SIGNUP CARD
+========================================= */
+
+.signup-card {
+    width: 410px;
+
+    padding: 34px 38px 27px;
+
+    position: relative;
+
+    z-index: 5;
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.95);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 30px 70px rgba(
+            55,
+            48,
+            163,
+            0.15
+        ),
+        0 10px 25px rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+
+    transition: 0.3s ease;
+}
+
+
+.signup-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 35px 80px rgba(
+            55,
+            48,
+            163,
+            0.18
+        ),
+        0 12px 30px rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+}
+
+
+/* =========================================
+   CARD BRAND
+========================================= */
+
+.signup-brand {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.signup-brand h1 {
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.signup-brand p {
+    margin-top: 4px;
+
+    color: #7b8190;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   FORM HEADING
+========================================= */
+
+.signup-card h2 {
+    text-align: center;
+
+    color: #374151;
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.signup-subtitle {
+    text-align: center;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+
+    margin-bottom: 21px;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.signup-card input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    margin-bottom: 13px;
+
+    border:
+        1px solid #dfe3ef;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: white;
+
+    color: #1f2937;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+
+    box-shadow:
+        0 4px 12px rgba(
+            79,
+            70,
+            229,
+            0.04
+        );
+}
+
+
+.signup-card input::placeholder {
+    color: #a3aabd;
+}
+
+
+.signup-card input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            99,
+            102,
+            241,
+            0.09
+        );
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.signup-card select {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    margin-bottom: 16px;
+
+    border:
+        1px solid #dfe3ef;
+
+    border-radius: 11px;
+
+    outline: none;
+
+    background: white;
+
+    color: #4b5563;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+
+.signup-card select:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            99,
+            102,
+            241,
+            0.09
+        );
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.signup-card button {
+    width: 100%;
+
+    height: 47px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    cursor: pointer;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    box-shadow:
+        0 8px 18px rgba(
+            124,
+            58,
+            237,
+            0.23
+        );
+
+    transition: 0.2s ease;
+}
+
+
+.signup-card button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(
+            124,
+            58,
+            237,
+            0.30
+        );
+}
+
+
+.signup-card button:active {
+    transform: translateY(1px);
+}
+
+
+/* =========================================
+   LOGIN LINK
+========================================= */
+
+.signup-account-text {
+    text-align: center;
+
+    margin-top: 16px;
+
+    color: #8b93a3;
+
+    font-size: 13px;
+}
+
+
+.signup-account-text span {
+    color: #6366f1;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.signup-account-text span:hover {
+    color: #db2777;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .signup-page {
+        gap: 40px;
+
+        padding: 40px;
+    }
+
+    .signup-info {
+        width: 420px;
+    }
+
+    .signup-info > h2 {
+        font-size: 35px;
+    }
+
+    .info-description,
+    .feature-card {
+        width: 100%;
+    }
+
+    .signup-card {
+        width: 390px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .signup-page {
+        flex-direction: column;
+
+        padding: 40px 20px;
+
+        gap: 30px;
+    }
+
+    .signup-info {
+        width: 100%;
+
+        max-width: 500px;
+
+        text-align: center;
+    }
+
+    .info-brand {
+        justify-content: center;
+    }
+
+    .signup-info > h2 {
+        font-size: 32px;
+    }
+
+    .info-description {
+        width: 100%;
+    }
+
+    .feature-card {
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .info-footer {
+        display: none;
+    }
+
+    .signup-card {
+        width: 100%;
+
+        max-width: 410px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .signup-page {
+        padding: 30px 15px;
+    }
+
+    .signup-info > h2 {
+        font-size: 28px;
+    }
+
+    .info-description {
+        font-size: 13px;
+    }
+
+    .feature-card {
+        padding: 12px;
+    }
+
+    .signup-card {
+        padding: 30px 24px 25px;
+    }
+
+    .signup-shape-one,
+    .signup-shape-two {
+        opacity: 0.6;
+    }
+}

@@ -1,0 +1,1015 @@
+/* =====================================================
+   TRUCK DRIVER DASHBOARD
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.truck-dashboard {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f5ff,
+            #faf8ff,
+            #fff5fa
+        );
+
+    color: #374151;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.truck-header {
+    height: 76px;
+
+    padding: 0 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 1px solid #eeeef5;
+
+    box-shadow:
+        0 5px 20px rgba(79, 70, 229, 0.06);
+
+    position: relative;
+    z-index: 20;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.truck-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.truck-logo {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    box-shadow:
+        0 7px 18px rgba(
+            124,
+            58,
+            237,
+            0.22
+        );
+}
+
+.truck-brand h1 {
+    font-size: 19px;
+
+    letter-spacing: 1.5px;
+
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.truck-brand span {
+    display: block;
+
+    font-size: 9px;
+
+    color: #9ca3af;
+
+    letter-spacing: 0.7px;
+}
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+.truck-header-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.driver-welcome {
+    display: flex;
+    flex-direction: column;
+
+    text-align: right;
+}
+
+.driver-welcome span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+.driver-welcome strong {
+    font-size: 13px;
+    color: #374151;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-wrapper {
+    position: relative;
+}
+
+.profile-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeecff,
+            #fce7f3
+        );
+
+    color: #6366f1;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    box-shadow:
+        0 5px 15px rgba(
+            99,
+            102,
+            241,
+            0.12
+        );
+}
+
+.profile-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(
+            99,
+            102,
+            241,
+            0.2
+        );
+}
+
+
+/* =====================================================
+   PROFILE DROPDOWN
+===================================================== */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: 55px;
+    right: 0;
+
+    width: 310px;
+
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #eeeef5;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 45px rgba(
+            79,
+            70,
+            229,
+            0.15
+        );
+
+    animation: profileDrop 0.2s ease;
+}
+
+@keyframes profileDrop {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* PROFILE TOP */
+
+.profile-top {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.profile-avatar {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    color: white;
+
+    font-size: 19px;
+}
+
+.profile-top h3 {
+    font-size: 15px;
+    color: #1f2937;
+}
+
+.profile-top span {
+    font-size: 11px;
+    color: #9ca3af;
+}
+
+
+/* DIVIDER */
+
+.profile-divider {
+    height: 1px;
+
+    background: #eeeef5;
+
+    margin: 18px 0;
+}
+
+
+/* PROFILE FIELD */
+
+.profile-field {
+    margin-bottom: 16px;
+}
+
+.profile-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    color: #6b7280;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+}
+
+.profile-value {
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 13px;
+
+    border-radius: 9px;
+
+    background: #f8f8ff;
+
+    border: 1px solid #eeeef5;
+
+    font-size: 13px;
+
+    color: #374151;
+}
+
+.profile-field input {
+    width: 100%;
+
+    height: 43px;
+
+    padding: 0 13px;
+
+    border: 1px solid #dfe3ef;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    color: #374151;
+
+    transition: 0.2s;
+}
+
+.profile-field input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(
+            99,
+            102,
+            241,
+            0.08
+        );
+}
+
+
+/* SAVE BUTTON */
+
+.save-phone {
+    width: 100%;
+
+    height: 42px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f46e5,
+            #7c3aed,
+            #db2777
+        );
+
+    transition: 0.2s;
+}
+
+.save-phone:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 18px rgba(
+            124,
+            58,
+            237,
+            0.22
+        );
+}
+
+
+/* LOGOUT */
+
+.logout-button {
+    width: 100%;
+
+    height: 40px;
+
+    margin-top: 9px;
+
+    border: 1px solid #f0dce7;
+
+    border-radius: 9px;
+
+    background: #fff7fa;
+
+    color: #db2777;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.logout-button:hover {
+    background: #fce7f3;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.truck-main {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 50px 30px 70px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.truck-intro {
+    margin-bottom: 30px;
+}
+
+.truck-badge,
+.small-badge {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: #eeecff;
+
+    color: #6366f1;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.truck-intro h2 {
+    margin-top: 12px;
+
+    font-size: 32px;
+
+    color: #30364d;
+}
+
+.truck-intro p {
+    margin-top: 8px;
+
+    color: #8b93a3;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   AVAILABILITY
+===================================================== */
+
+.availability-card {
+    padding: 24px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(
+            79,
+            70,
+            229,
+            0.08
+        );
+
+    margin-bottom: 25px;
+}
+
+.availability-left {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.availability-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #ecfdf5;
+
+    color: #059669;
+
+    font-size: 20px;
+
+    font-weight: 800;
+}
+
+.section-label {
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+
+    color: #9ca3af;
+}
+
+.availability-card h3 {
+    margin-top: 3px;
+
+    color: #374151;
+
+    font-size: 17px;
+}
+
+.availability-card p {
+    margin-top: 3px;
+
+    color: #9ca3af;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   AVAILABILITY BUTTON
+===================================================== */
+
+.availability-toggle {
+    min-width: 145px;
+
+    height: 45px;
+
+    padding: 0 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 25px;
+
+    background: #f3f4f6;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.availability-toggle.active {
+    background: #ecfdf5;
+
+    color: #059669;
+
+    border-color: #a7f3d0;
+}
+
+.toggle-circle {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #9ca3af;
+}
+
+.availability-toggle.active .toggle-circle {
+    background: #10b981;
+
+    box-shadow:
+        0 0 0 4px rgba(
+            16,
+            185,
+            129,
+            0.12
+        );
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.truck-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    min-height: 105px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    background: white;
+
+    border: 1px solid #eeeef5;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(
+            0,
+            0,
+            0,
+            0.04
+        );
+
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 13px 30px rgba(
+            79,
+            70,
+            229,
+            0.09
+        );
+}
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #f1f0ff;
+
+    font-size: 18px;
+}
+
+.stat-card span {
+    display: block;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    color: #9ca3af;
+
+    letter-spacing: 0.6px;
+}
+
+.stat-card strong {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #374151;
+}
+
+
+/* =====================================================
+   ROUTES
+===================================================== */
+
+.routes-section,
+.truck-details-card {
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(
+            79,
+            70,
+            229,
+            0.07
+        );
+
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.section-heading h2 {
+    margin-top: 7px;
+
+    color: #30364d;
+
+    font-size: 24px;
+}
+
+.section-heading p {
+    margin-top: 5px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.route-count {
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background: #f1f0ff;
+
+    color: #6366f1;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   EMPTY ROUTES
+===================================================== */
+
+.empty-routes {
+    margin-top: 25px;
+
+    min-height: 260px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border: 2px dashed #e5e2f5;
+
+    border-radius: 16px;
+
+    background: #fafaff;
+}
+
+.empty-route-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eeecff,
+            #fce7f3
+        );
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.empty-routes h3 {
+    font-size: 18px;
+
+    color: #374151;
+}
+
+.empty-routes p {
+    margin-top: 6px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+.empty-routes span {
+    margin-top: 12px;
+
+    font-size: 11px;
+
+    color: #b0b5c0;
+}
+
+.empty-routes span strong {
+    color: #6366f1;
+}
+
+
+/* =====================================================
+   TRUCK DETAILS
+===================================================== */
+
+.details-grid {
+    margin-top: 25px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.detail-item {
+    padding: 18px;
+
+    border-radius: 12px;
+
+    background: #fafaff;
+
+    border: 1px solid #eeeef5;
+}
+
+.detail-item span {
+    display: block;
+
+    font-size: 10px;
+
+    color: #9ca3af;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.detail-item strong {
+    font-size: 14px;
+
+    color: #374151;
+}
+
+.available-text {
+    color: #059669 !important;
+}
+
+.unavailable-text {
+    color: #db2777 !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .truck-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .details-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .truck-header {
+        padding: 0 20px;
+    }
+
+    .driver-welcome {
+        display: none;
+    }
+
+    .truck-main {
+        padding: 35px 15px 50px;
+    }
+
+    .truck-intro h2 {
+        font-size: 26px;
+    }
+
+    .availability-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .availability-toggle {
+        width: 100%;
+    }
+
+    .truck-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .routes-section,
+    .truck-details-card {
+        padding: 22px 18px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .profile-dropdown {
+        width: 280px;
+
+        right: -10px;
+    }
+
+}

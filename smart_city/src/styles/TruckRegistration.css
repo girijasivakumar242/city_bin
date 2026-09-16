@@ -1,0 +1,313 @@
+/* =====================================================
+   TRUCK REGISTRATION PAGE
+===================================================== */
+
+.truck-registration-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(76, 175, 80, 0.15),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(46, 125, 50, 0.15),
+      transparent 35%
+    ),
+    #f4f8f4;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   REGISTRATION CARD
+===================================================== */
+
+.truck-registration-card {
+  width: 100%;
+  max-width: 520px;
+
+  background: #ffffff;
+
+  padding: 40px;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.10);
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(76, 175, 80, 0.12);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.truck-registration-icon {
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #e8f5e9;
+
+  font-size: 38px;
+
+  box-shadow:
+    0 8px 20px rgba(46, 125, 50, 0.12);
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.truck-registration-card h1 {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  color: #1b5e20;
+}
+
+
+.truck-registration-card > p {
+  margin: 10px auto 30px;
+
+  max-width: 420px;
+
+  text-align: center;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #667366;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.truck-registration-card form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.truck-registration-card label {
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #344434;
+}
+
+
+/* =====================================================
+   INPUT + SELECT
+===================================================== */
+
+.truck-registration-card input,
+.truck-registration-card select {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d7e1d7;
+
+  border-radius: 12px;
+
+  background: #fbfdfb;
+
+  color: #263326;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.truck-registration-card input::placeholder {
+  color: #9aa59a;
+}
+
+
+/* =====================================================
+   INPUT FOCUS
+===================================================== */
+
+.truck-registration-card input:focus,
+.truck-registration-card select:focus {
+  border-color: #4caf50;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(76, 175, 80, 0.12);
+}
+
+
+/* =====================================================
+   SELECT
+===================================================== */
+
+.truck-registration-card select {
+  cursor: pointer;
+
+  appearance: auto;
+}
+
+
+/* =====================================================
+   LOADING / EMPTY DEPOT MESSAGE
+===================================================== */
+
+.truck-registration-card form > p {
+  margin: 4px 0 8px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  background: #f5f8f5;
+
+  color: #687568;
+
+  font-size: 14px;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   REGISTER BUTTON
+===================================================== */
+
+.truck-registration-card button[type="submit"] {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #2e7d32,
+    #43a047
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.truck-registration-card button[type="submit"]:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(46, 125, 50, 0.25);
+}
+
+
+.truck-registration-card button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+
+.truck-registration-card button[type="submit"]:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.65;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+  .truck-registration-page {
+    padding: 25px 15px;
+  }
+
+
+  .truck-registration-card {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+
+  .truck-registration-card h1 {
+    font-size: 25px;
+  }
+
+
+  .truck-registration-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 32px;
+  }
+
+}
